@@ -1,0 +1,184 @@
+<!--index.wxml-->
+<view class="school">浙江经贸职业技术学院</view>
+<view><calendar />
+是第周,共周</view>
+ <view class="row">
+    <view class="cell week">周</view>
+    <view class="cell title">一</view>
+    <view class="cell title">二</view>
+    <view class="cell title">三</view>
+    <view class="cell title">四</view>
+    <view class="cell title">五</view>
+    <view class="cell title">六</view>
+    <view class="cell title">七</view>
+    <view class="time title">时间</view>
+  </view>
+
+<scroll-view style="height:400rpx;" scroll-y="true">
+ <view class="row">
+  <view class="cell week">1</view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="time">11.14-11.15</view>
+  </view>
+  <view class="row">
+    <view class="cell week">10</view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>
+    <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>
+    <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>
+    <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>
+    <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>
+    <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>  <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>  <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>  <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>  <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>  <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>  <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>  <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>  <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>  <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>  <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>  <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>  <view class="row">
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+    <view class="cell gray"></view>
+  </view>
+
+
+
+</scroll-view>
+ 
