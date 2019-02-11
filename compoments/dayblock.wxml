@@ -1,0 +1,35 @@
+<view wx:if="{{is_today}}" class="row bold">
+  <block wx:for="{{idata}}" wx:key="idx" wx:for-index="idx" wx:for-item="elem">
+    <block wx:if="{{(elem == 1) && (idx <= 3)}}">
+      <view class="cell green"></view>
+    </block>
+    <block wx:elif="{{(elem == 1) && (idx <=7)}}">
+      <view class="cell orange2"></view>
+    </block>  
+    <block wx:elif="{{elem == 1}}">
+      <view class="cell red"></view>
+    </block>  
+    <block wx:else>
+      <view class="cell gray"></view>
+    </block>  
+  </block>
+</view>
+<view wx:else class="row">
+
+  <block wx:for="{{idata}}" wx:key="idx" wx:for-index="idx" wx:for-item="elem">
+    <block wx:if="{{(elem == 1) && (idx <= 3)}}">
+      <view class="cell green"></view>
+    </block>
+    <block wx:elif="{{(elem == 1) && (idx <=7)}}">
+      <view class="cell orange2"></view>
+    </block>  
+    <block wx:elif="{{elem == 1}}">
+      <view class="cell red"></view>
+    </block>  
+    <block wx:else>
+      <view class="cell gray"></view>
+    </block>  
+  </block>
+</view>
+
+  

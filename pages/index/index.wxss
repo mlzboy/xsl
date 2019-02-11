@@ -1,3 +1,26 @@
+.hide{
+  display: none;
+}
+
+
+
+input{
+  width:40%;
+  border-bottom-style: dashed;
+  border-bottom-width: 1rpx;
+  border-bottom-color: gray;
+  height:70rpx;
+  line-height: 70rpx;
+  margin:0 0 0 150rpx;
+  padding:0;
+}
+
+.orange
+{
+  color: orange;
+  font-weight: bold;
+}
+
 .page
 {
   height:100%;
@@ -8,12 +31,46 @@
 }
 .row
 {
+  height:70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
   width:100%;
   justify-content: center;
   display:flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
+
+.zan-dialog__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.zan-dialog__container {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  background: white;
+  transform: translateY(150%);
+  transition: all 0.4s ease;
+  z-index: 12;
+}
+
+.zan-dialog--show .zan-dialog__container {
+  transform: translateY(0);
+}
+
+.zan-dialog--show .zan-dialog__mask {
+  display: block;
+}
+
+
 
 .week
 {
@@ -26,22 +83,46 @@ text-align: center;
   font-size: 30rpx;
   text-align: center;
 }
-
+.time2
+{
+width:160rpx;
+font-size: 25rpx;
+line-height: 60rpx;
+height: 60rpx;
+word-break: break-all;
+}
 .time
 {
-width:200rpx;
+width:160rpx;
 font-size: 30rpx;
-line-height: 30rpx;
-height: 30rpx;
-margin:10rpx;
+line-height: 60rpx;
+height: 60rpx;
+word-break: break-all;
+margin:5rpx;
+}
+.bold
+{
+border-width: 6rpx;
+border-color: orange;
+border-style: dashed;
+}
+
+
+.btn
+{
+  color:#00c355;
+width: 120rpx;
+height: 60rpx;
+line-height: 60rpx;
+margin:20rpx;
 }
 
 .cell
 {
-width: 30rpx;
-height: 30rpx;
-line-height: 30rpx;
-margin:10rpx;
+width: 60rpx;
+height: 60rpx;
+line-height: 60rpx;
+margin:5rpx;
 }
 
 .gray
@@ -53,4 +134,44 @@ margin:10rpx;
 {
   background: green;
 }
+
+.red
+{
+  color:red;
+  font-weight: bold;
+}
+
+
+.zan-dialog__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.05);/*0.4*/
+  display: none;
+}
+
+.zan-dialog__container {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  background: white;
+  transform: translateY(150%);
+  transition: all 0.4s ease;
+  z-index: 12;
+}
+
+.zan-dialog--show .zan-dialog__container {
+  transform: translateY(0);
+}
+
+.zan-dialog--show .zan-dialog__mask {
+  display: block;
+}
+
+
+
+
 

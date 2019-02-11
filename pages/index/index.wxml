@@ -1,7 +1,9 @@
 <!--index.wxml-->
-<view class="school">浙江经贸职业技术学院</view>
-<view><calendar />
-是第周,共周</view>
+<view class="row" style="display:{{show_edit == true ?'none':''}}" bindlongtap='edit'>{{xschool}}</view>
+<view class="row" style="display:{{show_edit == true ?'':'none'}}">
+   <input value="{{xschool}}" auto-focus="true" bindinput = "bindKeyInput" /><view class="btn" bindtap="save">保存</view>
+</view>
+<view class="row"><picker mode="date" value="{{xdate}}" start="2019-02-01" end="2021-09-01" bindchange="bindDateChange"><view class="orange">{{xdate}}</view></picker>是第<picker bindchange="bindPickerChange" value="{{xweek}}" range="{{array}}"><view class="orange">{{xweek}}</view></picker>周,共<picker bindchange="bindPickerChange2" value="{{weeks}}" range="{{array}}"><view class="orange">{{weeks}}</view></picker>周</view>
  <view class="row">
     <view class="cell week">周</view>
     <view class="cell title">一</view>
@@ -10,175 +12,58 @@
     <view class="cell title">四</view>
     <view class="cell title">五</view>
     <view class="cell title">六</view>
-    <view class="cell title">七</view>
+    <view class="cell title">日</view>
     <view class="time title">时间</view>
   </view>
 
 <scroll-view style="height:400rpx;" scroll-y="true">
+<block wx:for="{{term_data}}" wx:key="{{idx}}" wx:for-index="idx" wx:for-item="row" >
  <view class="row">
-  <view class="cell week">1</view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="time">11.14-11.15</view>
+    <block wx:if="{{row[3] == -1}}">
+      <view class="cell week">{{idx+1}}</view>
+    </block>
+    <block wx:else>
+      <view class="cell week red">{{idx+1}}</view>
+    </block>
+  <block wx:for="{{row[0]}}" wx:key="idx2" wx:for-index="idx2" wx:for-item="day">
+    <dayblock idata="{{day}}" is_today="{{row[3]==idx2}}"/>
+  </block>
+    <view class="time2 title">{{row[1]}}-{{row[2]}}</view>
   </view>
-  <view class="row">
-    <view class="cell week">10</view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>
-    <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>
-    <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>
-    <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>
-    <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>
-    <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>  <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>  <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>  <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>  <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>  <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>  <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>  <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>  <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>  <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>  <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>  <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>  <view class="row">
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-    <view class="cell gray"></view>
-  </view>
+</block>
+
 
 
 
 </scroll-view>
- 
+<!--
+<view class="row">
+        <button class="mini-btn" type="default" size="mini" style="width:110rpx">+</button>
+
+</view>
+-->
+<view style="height:{{h}}px;background-color:#FFF;" bindtap='b'></view>
+ <view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+   <!-- <view class="zan-dialog__mask" bindtap="b" />-->
+    <view class="zan-dialog__container">
+    <view class="row" style="margin-top:5rpx;justify-content:space-between;align-items:center;"><view class="btn" bindtap="clear_course">清空课程</view><view>{{start_week}}-{{end_week}}周 周{{days[day-1]}} {{start_course}}-{{end_course}}节</view><view class="btn" bindtap='add_course'>添加课程</view></view>
+    <picker-view indicator-style="height: 150rpx;" style="width: 100%; height: 200rpx;" value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{term_data}}" wx:key="idx" wx:for-index="idx" class="row">第{{idx+1}}周</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{term_data}}" wx:key="idx" wx:for-index="idx" class="row">第{{idx+1}}周</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}" wx:key="{{days}}" class="row">周{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{courses}}" wx:key="{{courses}}" class="row">第{{item}}节</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{courses}}" wx:key="{{courses}}" class="row">第{{item}}节</view>
+      </picker-view-column>
+    </picker-view>
+    <view class="row orange" style="font-weight:normal">{{error_show}}</view>      
+    </view>
+  </view>

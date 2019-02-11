@@ -1,0 +1,66 @@
+.orange
+{
+  color: orange;
+  font-weight: bold;
+}
+.bold
+{
+border-width: 1rpx;
+border-color:red;
+border-style: dashed;
+}
+
+
+.row
+{
+  width:60rpx;
+  justify-content: center;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:5rpx;
+}
+
+.week
+{
+font-size:30rpx;
+text-align: center;
+}
+
+.title
+{
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.time
+{
+width:200rpx;
+font-size: 30rpx;
+line-height: 30rpx;
+height: 30rpx;
+margin:10rpx;
+}
+
+.cell
+{
+width: 15rpx;
+height: 20rpx;
+line-height: 20rpx;
+}
+
+.gray
+{
+  background:lightgray;
+}
+
+.green
+{
+  background: green;
+}
+
+.orange2{
+  background: orange;
+}
+
+.red{background: red}

@@ -1,0 +1,7 @@
+ <button bindtap='b'>aaa</button>
+ <view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+    <view class="zan-dialog__mask" bindtap="b" />
+    <view class="zan-dialog__container">
+      <view style="padding: 100px 0; text-align: center;">Dialog内容</view>
+    </view>
+  </view>

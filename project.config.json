@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.5.2",
-	"appid": "wx770436ef042cc0fd",
+	"appid": "wxd648821dccf4fd89",
 	"projectname": "rl",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -28,13 +28,39 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "testindex",
+					"pathName": "pages/test/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "popup",
+					"pathName": "pages/popup/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "log",
+					"pathName": "pages/logs/logs",
+					"query": "",
+					"scene": null
+				}
+			]
 		}
 	}
 }
