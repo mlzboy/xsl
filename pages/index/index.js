@@ -60,13 +60,15 @@ Page({
       })
     }})
   //_term_data首先从缓存加载，如果没有再生成
-   let [_xweek,_xdate,_xschool,_weeks,_term_data] = common.load_data_from_localstorage(this.data.xweek,this.data.xdate,this.data.xschool,this.data.weeks,this.data.term_data)
+   let [_xweek,_xdate,_xschool,_weeks,_term_data] = common.load_data_from_localstorage(this.data.xweek,this.data.xdate,this.data.xschool,this.data.weeks,this.data.term_data);
   //  console.log("_xweek",_xweek)
-  //  console.log("_xdate",_xdate)
+   console.error("_xdate",_xdate)
+
   //  console.log("_school",_xschool)
   //  console.log("_weeks",_weeks)
   //  console.log("_term_data",_term_data)
-    
+  // _xdate = common.get_today();
+  // console.error(_xdate);
 
 
     let array = []
@@ -159,6 +161,28 @@ Page({
     let _term_data = common.get_data(this.data.xdate, this.data.xweek, this.data.weeks)
     // console.log("zzzzzzzzzzz", _term_data)
     this.setData({ term_data: _term_data ,error_show:''})
+
+  },
+  /**
+* 用户点击右上角分享
+*/
+  onShareAppMessage: function (ops) {
+    if (ops.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(ops.target)
+    }
+    return {
+      title: '校事历-教学日历',
+      path: 'pages/index/index',
+      success: function (res) {
+        // 转发成功
+        console.log("转发成功:" + JSON.stringify(res));
+      },
+      fail: function (res) {
+        // 转发失败
+        console.log("转发失败:" + JSON.stringify(res));
+      }
+    }
 
   }
   

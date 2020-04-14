@@ -2,7 +2,11 @@
 
 var dayjs = require("./moment-im.js");
 
+function get_today(){
+  var d = dayjs().format("YYYY-MM-DD");
+  return d;
 
+}
 
 
 function get_first_day(sday, xweek) {
@@ -94,9 +98,10 @@ function gen_data(xdate, xweek, weeks) {
     row.push(start.format("MM.DD"))
     row.push(end.format("MM.DD"))
     let now = dayjs()
-    // console.log("now", now)
+    console.log("now===========>", now)
     if ((start.isBefore(now) == true) && (now.isBefore(end) == true)) {
       row.push(now.isoWeekday() - 1)
+      console.log("zzzzzzz=============>",now.isoWeekday()-1)
     }
     else {
       row.push(-1)
@@ -235,15 +240,15 @@ function load_data_from_localstorage(xweek,xdate,xschool,weeks,term_data)
     _weeks = weeks
   }
 
-  if (_has_key("term_data"))
-  {
-    _term_data = _get("term_data")
+  // if (_has_key("term_data"))
+  // {
+    // _term_data = _get("term_data")
     // console.log(typeof _term_data)
-  }
-  else
-  {
+  // }
+  // else
+  // {
     _term_data = gen_data(_xdate,_xweek,_weeks)
-  }
+  // }
   return [_xweek,_xdate,_xschool,_weeks,_term_data]
 
 }
@@ -257,5 +262,6 @@ module.exports={
   add_course:add_course,
   clear_course:clear_course,
   load_data_from_localstorage:load_data_from_localstorage,
-  save_data_to_localstorage:save_data_to_localstorage
+  save_data_to_localstorage:save_data_to_localstorage,
+  get_today:get_today
 }
