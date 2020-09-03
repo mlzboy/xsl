@@ -19,8 +19,35 @@ Page({
     xschool:"xx学院",
     xdate:'2019-02-10',
     xweek:2,
-    term_data:[]
+    term_data:[],
+    current_year:2020,
+    current_month:9,
+    current_day:3,
+    term:""
   },
+  onShareTimeline: function(res){
+    return {
+      title: '教师课表',
+      query: '/pages/index/index',
+      imageUrl: "/static/ganpei2.png"//自定义图片路径，可以是本地文件路径、代码包文件路径或者网络图片路径。支持PNG及JPG。显示图片长宽比是 5:4。
+    }
+  },
+    onShareAppMessage: function(res) {
+    console.log(res)
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log('hhhhhaa')
+    }
+    if (res.from === "menu"){
+      console.log("vvvv")
+    }
+    
+    return {
+      title: "教师课表",
+      path: "pages/index/index"
+      
+    }
+    },
     //控制 pop 的打开关闭
     b:function() {
       this.setData({
@@ -43,6 +70,15 @@ Page({
       this.setData({show_edit:false,xschool:this.data.temp_xschool})
     },
   onReady:function(){
+    var date = new Date();
+    let term  = "当前是" + (date.getFullYear()-1).toString() + "-" + date.getFullYear().toString() + "第二学年"
+    if (date.getMonth()>=8){
+      term  = "当前是" + date.getFullYear().toString() + "-" + (date.getFullYear()+1).toString() + "第一学年"
+    }
+    this.setData({current_year:date.getFullYear(),current_month:date.getMonth()+1,current_day:date.getDate(),term:term})
+
+
+
     var that = this;
   // 获取系统信息
   wx.getSystemInfo({

@@ -1,9 +1,10 @@
 <!--index.wxml-->
-<view class="row" style="display:{{show_edit == true ?'none':''}}" bindlongtap='edit'>{{xschool}}</view>
+<view class="row" style="display:{{show_edit == true ?'none':''}}" bindtap='edit'>{{xschool}}</view>
 <view class="row" style="display:{{show_edit == true ?'':'none'}}">
    <input value="{{xschool}}" auto-focus="true" bindinput = "bindKeyInput" /><view class="btn" bindtap="save">保存</view>
 </view>
 <view class="row"><picker mode="date" value="{{xdate}}" start="2019-02-01" end="2021-09-01" bindchange="bindDateChange"><view class="orange">{{xdate}}</view></picker>是第<picker bindchange="bindPickerChange" value="{{xweek}}" range="{{array}}"><view class="orange">{{xweek}}</view></picker>周,共<picker bindchange="bindPickerChange2" value="{{weeks}}" range="{{array}}"><view class="orange">{{weeks}}</view></picker>周</view>
+<view class="row"><view style="border:1rpx dashed red">今天是{{current_year}}年{{current_month}}月{{current_day}}日</view><view style="margin-left:20rpx">{{term}}</view></view>
  <view class="row">
     <view class="cell week">周</view>
     <view class="cell title">一</view>
@@ -36,6 +37,39 @@
 
 
 </scroll-view>
+<view class="memory_title">新品推荐</view>
+<view class="rowx" style="justify-content: flex-start;">
+  <navigator open-type="navigate" hover-class="none" target="miniProgram" app-id="wxd648821dccf4fd89" path="pages/home/home" extra-data="" version="release">
+<view class="exam" style="margin-right:15rpx">
+  <!-- <view style="width:100rpx;height:100rpx;line-height:100rpx;"> -->
+    <image src="../../static/ganpei2.png" mode="aspectFit" style="width:100rpx;height:100rpx;"></image>
+  <!-- </view> -->
+  <view class="text_test" style="width:120rpx;margin-left: -12rpx;">岗培机考</view>
+</view>
+</navigator>		
+<navigator open-type="navigate" hover-class="none" target="miniProgram" app-id="wxd3b898b290cd7ff8" path="pages/home/home" extra-data="" version="release">
+<view class="exam" style="margin-right:15rpx">
+  <!-- <view style="width:100rpx;height:100rpx;line-height:100rpx;"> -->
+    <image src="../../static/love.png" mode="aspectFit" style="width:100rpx;height:100rpx;"></image>
+  <!-- </view> -->
+  <view class="text_test" style="width:120rpx;margin-left: -12rpx;">恋爱先导题</view>
+</view>
+</navigator>		
+<navigator open-type="navigate" hover-class="none" target="miniProgram" app-id="wxae8d7c45066d6989" path="pages/gen/intro/index" extra-data="" version="release">
+<view class="exam" style="margin-right:15rpx">
+  <!-- <view class="icon_test">V</view> -->
+  <image src="../../static/zhea.png" mode="aspectFit" style="width:100rpx;height:100rpx;border-radius:50rpx"></image>
+  <view class="text_test" style="width:145rpx;margin-left: -20rpx;">汽车自动摇号</view>
+</view>
+</navigator>
+<navigator open-type="navigate" hover-class="none" target="miniProgram" app-id="wxacf05fcbd82dde19" path="pages/component/chat/chat" extra-data="" version="release">
+<view class="exam" style="margin-right:15rpx">
+  <!-- <view class="icon_test">V</view> -->
+  <image src="../../static/netcourse_timehelper.png" mode="aspectFit" style="width:100rpx;height:100rpx;border-radius:50rpx"></image>
+  <view class="text_test" style="width:145rpx;margin-left: -18rpx;">网课时间助手</view>
+</view>
+</navigator>													  
+</view>
 <!--
 <view class="row">
         <button class="mini-btn" type="default" size="mini" style="width:110rpx">+</button>
@@ -44,7 +78,7 @@
 -->
 <view style="height:{{h}}px;background-color:#FFF;" bindtap='b'></view>
  <view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
-   <!-- <view class="zan-dialog__mask" bindtap="b" />-->
+   <view class="zan-dialog__mask" bindtap="b" />
     <view class="zan-dialog__container">
     <view class="row" style="margin-top:5rpx;justify-content:space-between;align-items:center;"><view class="btn" bindtap="clear_course">清空课程</view><view>{{start_week}}-{{end_week}}周 周{{days[day-1]}} {{start_course}}-{{end_course}}节</view><view class="btn" bindtap='add_course'>添加课程</view></view>
     <picker-view indicator-style="height: 150rpx;" style="width: 100%; height: 200rpx;" value="{{value}}" bindchange="bindChange">

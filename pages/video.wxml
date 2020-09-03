@@ -1,0 +1,7 @@
+<video 
+      id="myVideo" 
+      autoplay="true"
+      src="http://dpv.videocc.net/812a792458/8/812a792458e3bcd690bc59db81f9ce28_3.mp4?pid=1599148961307X1381633" 
+      show-center-play-btn='{{true}}' 
+      show-play-btn="{{true}}" 
+    ></video>

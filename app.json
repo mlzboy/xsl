@@ -2,19 +2,33 @@
   "pages": [
     "pages/index/index",
     "pages/test/index",
-    "pages/popup/index"
+    "pages/popup/index",
+    "pages/video"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "校事历",
+    "navigationBarTitleText": "高校教师课表",
     "navigationBarTextStyle": "black"
   },
-  "plugins": {
-    "WechatSI": {
-      "version": "0.2.2",
-      "provider": "wx069ba97219f66d99"
-    }
+  "tabBar": {
+    "color": "lightgray",
+    "selectedColor": "#00c355",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "课表",
+        "iconPath": "images/gp2.png",
+        "selectedIconPath": "images/gp1.png"
+      },
+      {
+        "pagePath": "pages/video",
+        "text": "介绍",
+        "iconPath": "images/y81.png",
+        "selectedIconPath": "images/y812.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }
