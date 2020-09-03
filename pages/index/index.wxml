@@ -39,7 +39,7 @@
 </scroll-view>
 <view class="memory_title">新品推荐</view>
 <view class="rowx" style="justify-content: flex-start;">
-  <navigator open-type="navigate" hover-class="none" target="miniProgram" app-id="wxd648821dccf4fd89" path="pages/home/home" extra-data="" version="release">
+  <navigator open-type="navigate" hover-class="none" target="miniProgram" app-id="wxd648821dccf4fd89" path="pages/index/index" extra-data="" version="release">
 <view class="exam" style="margin-right:15rpx">
   <!-- <view style="width:100rpx;height:100rpx;line-height:100rpx;"> -->
     <image src="../../static/ganpei2.png" mode="aspectFit" style="width:100rpx;height:100rpx;"></image>

@@ -29,25 +29,9 @@ Page({
     return {
       title: '教师课表',
       query: '/pages/index/index',
-      imageUrl: "/static/ganpei2.png"//自定义图片路径，可以是本地文件路径、代码包文件路径或者网络图片路径。支持PNG及JPG。显示图片长宽比是 5:4。
+      imageUrl: "/static/kcb.png"//自定义图片路径，可以是本地文件路径、代码包文件路径或者网络图片路径。支持PNG及JPG。显示图片长宽比是 5:4。
     }
   },
-    onShareAppMessage: function(res) {
-    console.log(res)
-    if (res.from === 'button') {
-      // 来自页面内转发按钮
-      console.log('hhhhhaa')
-    }
-    if (res.from === "menu"){
-      console.log("vvvv")
-    }
-    
-    return {
-      title: "教师课表",
-      path: "pages/index/index"
-      
-    }
-    },
     //控制 pop 的打开关闭
     b:function() {
       this.setData({
@@ -208,7 +192,7 @@ Page({
       console.log(ops.target)
     }
     return {
-      title: '校事历-教学日历',
+      title: "教师课表",
       path: 'pages/index/index',
       success: function (res) {
         // 转发成功
