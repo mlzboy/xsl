@@ -1,88 +1,91 @@
 {
-  "description": "项目配置文件",
-  "packOptions": {
-    "ignore": []
-  },
-  "setting": {
-    "urlCheck": false,
-    "es6": true,
-    "enhance": false,
-    "postcss": true,
-    "preloadBackgroundData": false,
-    "minified": true,
-    "newFeature": true,
-    "coverView": true,
-    "autoAudits": false,
-    "showShadowRootInWxmlPanel": true,
-    "scopeDataCheck": false,
-    "checkInvalidKey": true,
-    "checkSiteMap": true,
-    "uploadWithSourceMap": true,
-    "useMultiFrameRuntime": false,
-    "useApiHook": true,
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    },
-    "useIsolateContext": true,
-    "useCompilerModule": true,
-    "userConfirmedUseCompilerModuleSwitch": false,
-    "packNpmManually": false,
-    "packNpmRelationList": []
-  },
-  "compileType": "miniprogram",
-  "libVersion": "2.10.4",
-  "appid": "wx2f1f9c1259c3dfc4",
-  "projectname": "rl",
-  "debugOptions": {
-    "hidedInDevtools": []
-  },
-  "isGameTourist": false,
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
-  "condition": {
-    "search": {
-      "current": -1,
-      "list": []
-    },
-    "conversation": {
-      "current": -1,
-      "list": []
-    },
-    "plugin": {
-      "current": -1,
-      "list": []
-    },
-    "game": {
-      "currentL": -1,
-      "list": []
-    },
-    "miniprogram": {
-      "current": 2,
-      "list": [
-        {
-          "id": -1,
-          "name": "testindex",
-          "pathName": "pages/test/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": 1,
-          "name": "popup",
-          "pathName": "pages/popup/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "log",
-          "pathName": "pages/logs/logs",
-          "query": "",
-          "scene": null
-        }
-      ]
-    }
-  }
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"scopeDataCheck": false,
+		"coverView": true,
+		"es6": true,
+		"postcss": true,
+		"compileHotReLoad": false,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"autoAudits": false,
+		"newFeature": true,
+		"uglifyFileName": false,
+		"uploadWithSourceMap": true,
+		"useIsolateContext": true,
+		"nodeModules": false,
+		"enhance": false,
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false,
+		"showShadowRootInWxmlPanel": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"useMultiFrameRuntime": false,
+		"useApiHook": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"packNpmManually": false,
+		"packNpmRelationList": []
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.4",
+	"appid": "wx2f1f9c1259c3dfc4",
+	"projectname": "rl",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "testindex",
+					"pathName": "pages/test/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "popup",
+					"pathName": "pages/popup/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "log",
+					"pathName": "pages/logs/logs",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
 }
